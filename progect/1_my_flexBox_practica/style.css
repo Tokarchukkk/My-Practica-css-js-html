@@ -1,0 +1,316 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+.bigred{
+	font-size: 20px;
+	color: red;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;/*оболочка на весь экран */
+    overflow: hidden;/*что бы текст не вылез */
+    display: flex;
+    flex-direction: column;/*будет 5 блоков выстраиваем их вертикально*/
+}
+
+.hi {
+    background-color: #445162;
+    padding: 50px 0px; /*отступ вего блока*/
+}
+
+.hi_row {
+    display: flex;
+    justify-content: space-between;/*раскиает элементы по разным сторонам */
+    flex-wrap: wrap;/*разрешим перенос при уменьшении экрана*/
+    
+}
+
+.hi_body {
+    color: #fff;
+    padding: 0px 30px 0px 0px; /*отступ до картинки если большой текст */
+}
+
+.hi_title{
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    font-size: 60px;
+    margin: 0px 0px 38px 0px;
+}
+
+.hi_list li {
+    background: url('img/check_icon.png') 0 1px no-repeat;/*картинка к Li, и что бы стрелочка не съезжала на большом тексте*/
+    font-size: 20px;
+    line-height: 22px;/*расстояние между строками*/
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    padding: 0px 0px 0px 36px;
+    margin: 0px 0px 15px 0px;
+}
+
+.hi_list li:last-child {
+    margin-bottom: 0px; /*отступ снизу забираем у последнего li*/
+}
+
+.content_first_block {
+    flex: 1 1 auto;/*разрешая уменьшаться и увеличиваться футер прибьет к низу*/
+}
+
+/*ограничивае всем блокам ширину */
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+   
+}
+
+/*2 блок */
+.flex_quastion {
+    background-color: #ffffff;
+    padding: 50px 0px 50px 0px;
+    
+}
+.guestion_row {
+    display: flex;
+    
+}
+/*всем темам в документе*/
+.theme {
+    color: #445161;
+    font-size: 30px;
+}
+
+.guestion_label.theme {
+    padding: 0px 0px 12px 0px;
+}
+
+.guestion_text p{
+    font-size: 16px;
+    color: #333333;
+    line-height: 24px;
+    margin-top: 25px;
+}
+
+/*картинке задаем размеры, запрещаем изменяться и если картинка потом будет больше она поместится  */
+.guestion_image {
+    flex: 0 0 430px;
+}
+
+.guestion_image img {/*в будущем если картинка поменяется*/
+    max-width: 100%;
+}
+
+.guestion_body {/*разрешаем 2 блоку уменьшаться и увеличиваться */
+    flex: 1 1 auto;
+    padding-left: 38px;
+}
+
+/*4 блока с картинками*/
+.box_zone {
+    background-color: #f5f5f5;
+}
+
+.box_all {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px 0 0;/*отрицательный margin для всех колонок*/
+    padding-bottom: 50px;
+}
+
+.box {
+    display: flex;
+    width: 50%;/*разрешаем колонке занимать 50% блока container*/
+    margin: 29px 0 0 0 ;
+    padding: 0 0 0 8px;/*от текста слева до след колонки при паддинге 8 и margin -8 расстояние всегда будет 16*/
+}
+
+.image_box {
+    flex: 0 0 200px; /*запрещаем картинке блока изменяться и устанавливаем ей ширину*/
+    margin: 0 14px 0 0;
+}
+
+.box_row {
+    flex: 1 1 auto; /*разрешаем тексту все*/
+
+}
+
+.label_box{
+    color: #445161;
+    font-size: 24px;
+    padding: 0 0 15px 0;
+}
+.text_box{
+    color: #333333;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.box_theme {
+     text-align: center;
+    margin: 50px 0 0 0;
+}
+
+.columns_all_body{
+    background-color: #ffffff;
+}
+
+.container_columns{
+    max-width: 990px;/*ограничиваем ширину 3 колонок*/
+    margin: 0 auto;
+    padding-bottom: 50px;;
+    
+}
+
+.theme_columns{
+    text-align: center;
+    padding: 50px 0 30px 0;
+    
+}
+
+.three_columns {/*снова отриц.margin что бы расстояние было одинаковым*/
+    display: flex;
+    margin: 0 -22.5px;
+ 
+    
+}
+.column{ /*оболочке даем паддинг, но бэк колор колонки не отобразится на padding, для этого этот класс*/
+    display: flex;
+    width: 33.33%;
+    padding: 0 22.5px;
+
+}
+
+.column_item{
+    display: flex;
+    flex-direction: column;
+    background-color: #445162;
+    border-radius: 5px;
+    border: 1px solid #445162;
+}
+
+.column_head{
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 17px;
+    
+}
+
+.column_label{
+    font-size: 40px;
+    color: #445162;
+    line-height: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 17px;
+}
+
+.text_column{
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 24px;
+    background-color: #445162;
+    flex: 1; /*прижмет кнопку к низу*/
+    padding: 20px 20px  0 20px;
+
+}
+
+.text_column p {
+    margin-bottom: 36px;
+}
+
+.text_column p:last-child{
+    margin: 0px;
+}
+
+.buttons{
+    color: #445161;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: #ffffff;
+    padding: 8px;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #f5f5f5;
+}
+.footer_row {
+    display: flex;
+    height: 65px;
+    justify-content: center;/*вырвнивание по горзонтали*/
+    align-items: center;/*по вертикали */
+}
+
+.footer_text {
+    color: #445162;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+@media screen and (max-width: 650px) {
+    .guestion_row {
+      flex-wrap: wrap;
+}
+    .box_all{
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        flex-wrap: wrap;
+    }
+    .three_columns{
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+   .column{
+       width: auto;
+       margin: 10px;
+   }
+    
+}
+    
